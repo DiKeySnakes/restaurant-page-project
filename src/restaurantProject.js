@@ -34,6 +34,7 @@ function createNavbar() {
   navWrapper.classList.add('navWrapper');
 
   const navbarLogo = document.createElement('img');
+  navbarLogo.classList.add('navbarLogo');
   navbarLogo.src = Big_Smoke_Burger_navbar_logo;
   navbarLogo.alt = 'Big Smoke Burger Logo';
 
