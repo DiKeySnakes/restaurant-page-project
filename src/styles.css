@@ -1,0 +1,346 @@
+@import 'normalize.css';
+
+:root {
+  --main-white: #f0f0f0;
+  --main-black: #303841;
+  --main-gray: hsla(212, 15%, 29%, 1);
+  --main-blue: rgba(48, 43, 99, 0.8);
+  --main-yellow: hsla(47, 100%, 58%, 1);
+  --main-text-shadow: 0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.75);
+  --text-shadow-yellow: 0.5rem 0.5rem 0.25rem hsla(47, 100%, 58%, 0.5);
+  --main-box-shadow: 2.5rem 2.5rem 1.25rem 0rem rgba(0, 0, 0, 0.75);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Indie Flower', cursive;
+}
+
+body {
+  background-image: url('./images/BSB_background_image.jpg');
+  background-size: cover;
+}
+
+#main {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -50vw;
+}
+
+.headerLogo {
+  width: 10rem;
+  height: auto;
+}
+
+.header h1 {
+  text-shadow: var(--text-shadow-yellow);
+}
+
+h1 {
+  font-size: 10rem;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+  font-family: 'Dancing Script', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+}
+
+p {
+  font-size: 3rem;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mottoHeader {
+  color: var(--main-yellow);
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: normal;
+}
+
+.invitation {
+  color: var(--main-yellow);
+}
+
+.mainHomeImage {
+  width: 60vw;
+  height: auto;
+  box-shadow: var(--main-box-shadow);
+  margin-bottom: 10rem;
+}
+
+.secondaryHomeImage {
+  width: 60vw;
+  height: auto;
+  box-shadow: var(--main-box-shadow);
+  margin-top: 7rem;
+}
+
+.home h2 {
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 0;
+}
+
+/* .homeFooterLogo,
+.menuFooterLogo,
+.contactsFooterLogo,
+.aboutFooterLogo {
+  margin-bottom: 10rem;
+} */
+
+#footer {
+  /* width: 100vw; */
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: var(--main-yellow);
+  text-shadow: var(--main-text-shadow);
+  background: rgba(0, 0, 0, 0.9);
+  /* position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50vw; */
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--main-yellow);
+  text-shadow: var(--main-text-shadow);
+}
+
+#footer a:hover {
+  text-decoration: underline;
+  color: var(--main-yellow);
+  text-shadow: var(--main-text-shadow);
+}
+
+#icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+#icon:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSlogan {
+  color: var(--main-yellow);
+}
+
+.menuMainImage {
+  width: 60vw;
+  height: auto;
+  box-shadow: var(--main-box-shadow);
+  margin-bottom: 2rem;
+}
+
+.menu {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  gap: 1.6rem;
+}
+
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  margin: 5rem 5rem;
+  cursor: pointer;
+  box-shadow: var(--main-box-shadow);
+}
+
+.menuCard p {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.menuCard > img {
+  margin-top: 3rem;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  color: var(--main-white);
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-nav {
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  transition: transform 0.3s;
+}
+
+.button-nav.active {
+  color: var(--main-yellow);
+}
+
+.button-nav:hover {
+  transform: translateY(-10%);
+}
+
+.about {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourMissionLogo,
+.ourGoalsLogo {
+  width: 85rem;
+  height: auto;
+  margin-top: 10rem;
+}
+
+.about p {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 7rem;
+  border-radius: 2rem;
+}
+
+.ourMissionHeader,
+.ourGoalsHeader {
+  font-size: 6rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: var(--main-text-shadow);
+}
+
+.imageBlock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.firstImage,
+.secondImage {
+  margin: 1rem;
+  box-shadow: var(--main-box-shadow);
+}
+
+.contactMessage {
+  font-size: 6rem;
+  color: var(--main-yellow);
+}
+
+.contactsHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contactsHeaderLogo {
+  width: 85rem;
+  height: auto;
+  margin: 10rem;
+}
+
+.restaurantAddressCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--main-white);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  box-shadow: var(--main-box-shadow);
+  padding: 4rem;
+  margin: 7rem auto;
+}
+
+.addressSecondLine,
+.addressThirdLine,
+.addressFourthLine,
+.addressFifthLine,
+.addressSixthLine,
+.addressSeventhLine {
+  margin: 1rem auto;
+}
+
+.addressFirstLine {
+  font-size: 5rem;
+  color: var(--main-yellow);
+  margin-bottom: 7rem;
+}
+
+.addressEighthLine {
+  margin-top: 7rem;
+}
+
+.restaurantViewImg {
+  width: 60vw;
+  height: auto;
+  box-shadow: var(--main-box-shadow);
+  margin-top: 6rem;
+}
